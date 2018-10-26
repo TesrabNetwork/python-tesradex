@@ -17,8 +17,6 @@ Welcome to python-tesradex v0.1.11
 .. image:: https://img.shields.io/pypi/wheel/python-tesradex.svg
     :target: https://pypi.python.org/pypi/python-tesradex
 
-.. image:: https://img.shields.io/pypi/pyversions/python-tesradex.svg
-    :target: https://pypi.python.org/pypi/python-tesradex
 
 This is an unofficial Python wrapper for the `Tesradex exchanges REST API v1 <https://tesradexapidocs.docs.apiary.io/>`_. I am in no way affiliated with Tesradex, use at your own risk.
 
