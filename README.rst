@@ -77,7 +77,7 @@ Register an account with `Tesradex <https://www.tesradex.com/#/?r=E42cWB>`_.
 
 For more `check out the documentation <https://python-tesradex.readthedocs.io/en/latest/>`_.
 
-Other Exchanges
+Other Languages
 ---------------
 
 If you use `Binance <https://www.binance.com/?ref=10099792>`_ check out my `python-binance <https://github.com/sammchardy/python-binance>`_ library.
