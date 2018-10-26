@@ -15,7 +15,7 @@ Install with ``pip``:
 Register on Tesradex
 -------------------
 
-Firstly register an account with `Tesradex <https://www.tesradex.com/#/?r=E42cWB>`_.
+Firstly register an account with `Tesradex <https://www.tesradex.com/`_.
 
 Generate an API Key
 -------------------
