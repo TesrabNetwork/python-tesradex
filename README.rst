@@ -89,6 +89,6 @@ or `Qryptos <https://accounts.qryptos.com/sign-up?affiliate=PAxghztC67615>`_ che
 
 If you use `Go <https://idex.market>`_ check out the `Go-Tesradex <https://github.com/sammchardy/python-idex>`_ library.
 
-If you use `C/C++ <https://big.one>`_ check out my `python-bigone <https://github.com/sammchardy/python-bigone>`_ library.
+If you use `C/CPP <https://big.one>`_ check out the `C/CPP-Tesradex <https://github.com/sammchardy/python-bigone>`_ library.
 
 .. image:: https://analytics-pixel.appspot.com/UA-111417213-1/github/python-tesradex?pixel
