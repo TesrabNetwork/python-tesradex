@@ -82,7 +82,7 @@ Other Languages
 
 If you use `Javascript <https://www.binance.com/?ref=10099792>`_ check out the `Javascript-Tesradex <https://github.com/sammchardy/python-binance>`_ library.
 
-If you use `Java <https://www.allcoin.com/Account/RegisterByPhoneNumber/?InviteCode=MTQ2OTk4MDgwMDEzNDczMQ==>`_ check out my `python-allucoin <https://github.com/sammchardy/python-allcoin>`_ library.
+If you use `Java <https://www.allcoin.com/Account/RegisterByPhoneNumber/?InviteCode=MTQ2OTk4MDgwMDEzNDczMQ==>`_ check out the `Java-Tesradex <https://github.com/sammchardy/python-allcoin>`_ library.
 
 If you use `PHP <https://accounts.quoinex.com/sign-up?affiliate=PAxghztC67615>`_
 or `Qryptos <https://accounts.qryptos.com/sign-up?affiliate=PAxghztC67615>`_ check out my `python-quoine <https://github.com/sammchardy/python-quoine>`_ library.
