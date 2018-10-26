@@ -8,7 +8,7 @@ PyPi
   https://pypi.python.org/pypi/python-tesradex
 
 Source code
-  https://github.com/sammchardy/python-tesradex
+  https://github.com/TesrabNetwork/python-tesradex
 
 Documentation
   https://python-tesradex.readthedocs.io/en/latest/
