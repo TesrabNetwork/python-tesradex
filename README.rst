@@ -89,5 +89,5 @@ or `CPP <https://accounts.qryptos.com/sign-up?affiliate=PAxghztC67615>`_ check o
 
 If you use `Go <https://idex.market>`_ check out the `Go-Tesradex <https://github.com/sammchardy/python-idex>`_ library.
 
-If you use `PHP <https://big.one>`_ check out the `C/CPP-Tesradex <https://github.com/sammchardy/python-bigone>`_ library.
+If you use `PHP <https://secure.php.net/>`_ check out the `C/CPP-Tesradex <https://github.com/sammchardy/python-bigone>`_ library.
 
