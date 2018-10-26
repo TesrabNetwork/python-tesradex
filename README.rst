@@ -27,7 +27,7 @@ Features
 Quick Start
 -----------
 
-Register an account with `Tesradex <https://www.tesradex.com/#/?r=E42cWB>`_.
+Register an account with `Tesradex <https://www.tesrabnetwrok.com/`_.
 
 `Generate an API Key <https://www.tesradex.com/#/user/setting/api>`_ and enable it.
 
