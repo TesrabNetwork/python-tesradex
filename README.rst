@@ -13,9 +13,6 @@ Source code
 Documentation
   https://python-tesradex.readthedocs.io/en/latest/
 
-Blog with examples
-  https://sammchardy.github.io
-
 
 Features
 --------
