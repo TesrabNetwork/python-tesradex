@@ -4,23 +4,23 @@ Getting Started
 Installation
 ------------
 
-``python-kucoin`` is available on `PYPI <https://pypi.python.org/pypi/python-kucoin/>`_.
+``python-tesradex`` is available on `PYPI <https://pypi.python.org/pypi/python-tesradex/>`_.
 Install with ``pip``:
 
 .. code:: bash
 
-    pip install python-kucoin
+    pip install python-tesradex
 
 
-Register on Kucoin
+Register on Tesradex
 -------------------
 
-Firstly register an account with `Kucoin <https://www.kucoin.com/#/?r=E42cWB>`_.
+Firstly register an account with `Tesradex <https://www.tesradex.com/#/?r=E42cWB>`_.
 
 Generate an API Key
 -------------------
 
-To use signed account methods you are required to `create an API Key <https://www.kucoin.com/#/user/setting/api>`_ and enable it.
+To use signed account methods you are required to `create an API Key <https://www.tesradex.com/#/user/setting/api>`_ and enable it.
 
 Initialise the client
 ---------------------
@@ -29,7 +29,7 @@ Pass your API Key and Secret
 
 .. code:: python
 
-    from kucoin.client import Client
+    from tesradex.client import Client
     client = Client(api_key, api_secret)
 
     # optionally pass the language you would like to use

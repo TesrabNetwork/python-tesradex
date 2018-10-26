@@ -1,10 +1,10 @@
-Kucoin API
+Tesradex API
 ==========
 
 client module
 ----------------------
 
-.. automodule:: kucoin.client
+.. automodule:: tesradex.client
     :members:
     :undoc-members:
     :show-inheritance:
@@ -13,7 +13,7 @@ client module
 exceptions module
 --------------------------
 
-.. automodule:: kucoin.exceptions
+.. automodule:: tesradex.exceptions
     :members:
     :undoc-members:
     :show-inheritance:
@@ -22,7 +22,7 @@ exceptions module
 helpers module
 --------------------------
 
-.. automodule:: kucoin.helpers
+.. automodule:: tesradex.helpers
     :members:
     :undoc-members:
     :show-inheritance:

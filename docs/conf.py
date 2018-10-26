@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# python-kucoin documentation build configuration file, created by
+# python-tesradex documentation build configuration file, created by
 # sphinx-quickstart on Thu Sep 21 20:24:54 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -49,7 +49,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'python-kucoin'
+project = 'python-tesradex'
 copyright = '2017, Sam McHardy'
 author = 'Sam McHardy'
 
@@ -119,7 +119,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'python-kucoindoc'
+htmlhelp_basename = 'python-tesradexdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -146,7 +146,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'python-kucoin.tex', 'python-kucoin Documentation',
+    (master_doc, 'python-tesradex.tex', 'python-tesradex Documentation',
      'Sam McHardy', 'manual'),
 ]
 
@@ -156,7 +156,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'python-kucoin', 'python-kucoin Documentation',
+    (master_doc, 'python-tesradex', 'python-tesradex Documentation',
      [author], 1)
 ]
 
@@ -167,8 +167,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'python-kucoin', 'python-kucoin Documentation',
-     author, 'python-kucoin', 'One line description of project.',
+    (master_doc, 'python-tesradex', 'python-tesradex Documentation',
+     author, 'python-tesradex', 'One line description of project.',
      'Miscellaneous'),
 ]
 

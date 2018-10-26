@@ -1,35 +1,35 @@
 ================================
-Welcome to python-kucoin v0.1.11
+Welcome to python-tesradex v0.1.11
 ================================
 
-.. image:: https://img.shields.io/pypi/v/python-kucoin.svg
-    :target: https://pypi.python.org/pypi/python-kucoin
+.. image:: https://img.shields.io/pypi/v/python-tesradex.svg
+    :target: https://pypi.python.org/pypi/python-tesradex
 
-.. image:: https://img.shields.io/pypi/l/python-kucoin.svg
-    :target: https://pypi.python.org/pypi/python-kucoin
+.. image:: https://img.shields.io/pypi/l/python-tesradex.svg
+    :target: https://pypi.python.org/pypi/python-tesradex
 
-.. image:: https://img.shields.io/travis/sammchardy/python-kucoin.svg
-    :target: https://travis-ci.org/sammchardy/python-kucoin
+.. image:: https://img.shields.io/travis/sammchardy/python-tesradex.svg
+    :target: https://travis-ci.org/sammchardy/python-tesradex
 
-.. image:: https://img.shields.io/coveralls/sammchardy/python-kucoin.svg
-    :target: https://coveralls.io/github/sammchardy/python-kucoin
+.. image:: https://img.shields.io/coveralls/sammchardy/python-tesradex.svg
+    :target: https://coveralls.io/github/sammchardy/python-tesradex
 
-.. image:: https://img.shields.io/pypi/wheel/python-kucoin.svg
-    :target: https://pypi.python.org/pypi/python-kucoin
+.. image:: https://img.shields.io/pypi/wheel/python-tesradex.svg
+    :target: https://pypi.python.org/pypi/python-tesradex
 
-.. image:: https://img.shields.io/pypi/pyversions/python-kucoin.svg
-    :target: https://pypi.python.org/pypi/python-kucoin
+.. image:: https://img.shields.io/pypi/pyversions/python-tesradex.svg
+    :target: https://pypi.python.org/pypi/python-tesradex
 
-This is an unofficial Python wrapper for the `Kucoin exchanges REST API v1 <https://kucoinapidocs.docs.apiary.io/>`_. I am in no way affiliated with Kucoin, use at your own risk.
+This is an unofficial Python wrapper for the `Tesradex exchanges REST API v1 <https://tesradexapidocs.docs.apiary.io/>`_. I am in no way affiliated with Tesradex, use at your own risk.
 
 PyPi
-  https://pypi.python.org/pypi/python-kucoin
+  https://pypi.python.org/pypi/python-tesradex
 
 Source code
-  https://github.com/sammchardy/python-kucoin
+  https://github.com/sammchardy/python-tesradex
 
 Documentation
-  https://python-kucoin.readthedocs.io/en/latest/
+  https://python-tesradex.readthedocs.io/en/latest/
 
 Blog with examples
   https://sammchardy.github.io
@@ -48,18 +48,18 @@ Features
 Quick Start
 -----------
 
-Register an account with `Kucoin <https://www.kucoin.com/#/?r=E42cWB>`_.
+Register an account with `Tesradex <https://www.tesradex.com/#/?r=E42cWB>`_.
 
-`Generate an API Key <https://www.kucoin.com/#/user/setting/api>`_ and enable it.
+`Generate an API Key <https://www.tesradex.com/#/user/setting/api>`_ and enable it.
 
 .. code:: bash
 
-    pip install python-kucoin
+    pip install python-tesradex
 
 
 .. code:: python
 
-    from kucoin.client import Client
+    from tesradex.client import Client
     client = Client(api_key, api_secret)
 
     # get currencies
@@ -96,7 +96,7 @@ Register an account with `Kucoin <https://www.kucoin.com/#/?r=E42cWB>`_.
     klines = client.get_historical_klines_tv("NEO-BTC", KLINE_INTERVAL_1WEEK, "1 Jan, 2017")
 
 
-For more `check out the documentation <https://python-kucoin.readthedocs.io/en/latest/>`_.
+For more `check out the documentation <https://python-tesradex.readthedocs.io/en/latest/>`_.
 
 Donate
 ------
@@ -122,4 +122,4 @@ If you use `IDEX <https://idex.market>`_ check out my `python-idex <https://gith
 
 If you use `BigONE <https://big.one>`_ check out my `python-bigone <https://github.com/sammchardy/python-bigone>`_ library.
 
-.. image:: https://analytics-pixel.appspot.com/UA-111417213-1/github/python-kucoin?pixel
+.. image:: https://analytics-pixel.appspot.com/UA-111417213-1/github/python-tesradex?pixel

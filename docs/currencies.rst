@@ -1,6 +1,6 @@
 Currency Endpoints
 ==================
 
-.. autoclass:: kucoin.client.Client
+.. autoclass:: tesradex.client.Client
     :members: get_currencies
     :noindex:

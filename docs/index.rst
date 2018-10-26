@@ -1,4 +1,4 @@
-.. python-kucoin documentation master file
+.. python-tesradex documentation master file
 
 .. include:: ../README.rst
 
@@ -22,7 +22,7 @@ Contents
    exceptions
    changelog
 
-   kucoin
+   tesradex
 
 Index
 ==================

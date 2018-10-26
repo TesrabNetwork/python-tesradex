@@ -24,7 +24,7 @@ v0.1.9 - 2018-02-09
 
 **Updated**
 
-- path for `get_all_balances` to match update in Kucoin docs, now supports pagination
+- path for `get_all_balances` to match update in Tesradex docs, now supports pagination
 
 v0.1.8 - 2018-01-20
 ^^^^^^^^^^^^^^^^^^^
@@ -122,7 +122,7 @@ v0.1.0 - 2017-11-12
 
 **Added**
 
-- Kucoin client interface
+- Tesradex client interface
 - Coverage for all main endpoints
 - Constants for transfer type and status, order side and kline resolution
 - Full documentation

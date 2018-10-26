@@ -6,13 +6,13 @@ import hmac
 import time
 import requests
 
-from .exceptions import KucoinAPIException, KucoinRequestException, KucoinResolutionException
+from .exceptions import TesradexAPIException, TesradexRequestException, TesradexResolutionException
 from .helpers import date_to_seconds
 
 
 class Client(object):
 
-    API_URL = 'https://api.kucoin.com'
+    API_URL = 'https://api.tesradex.com'
     API_VERSION = 'v1'
     _language = 'en-US'
 
@@ -49,9 +49,9 @@ class Client(object):
     }
 
     def __init__(self, api_key, api_secret, language=None, requests_params=None):
-        """Kucoin API Client constructor
+        """Tesradex API Client constructor
 
-        https://kucoinapidocs.docs.apiary.io/
+        https://tesradexapidocs.docs.apiary.io/
 
         :param api_key: Api Token Id
         :type api_key: string
@@ -77,7 +77,7 @@ class Client(object):
 
         session = requests.session()
         headers = {'Accept': 'application/json',
-                   'User-Agent': 'python-kucoin',
+                   'User-Agent': 'python-tesradex',
                    'KC-API-KEY': self.API_KEY,
                    'HTTP_ACCEPT_LANGUAGE': self._language,
                    'Accept-Language': self._language}
@@ -153,12 +153,12 @@ class Client(object):
         """
 
         if not str(response.status_code).startswith('2'):
-            raise KucoinAPIException(response)
+            raise TesradexAPIException(response)
         try:
             json = response.json()
 
             if 'success' in json and not json['success']:
-                raise KucoinAPIException(response)
+                raise TesradexAPIException(response)
 
             self._last_timestamp = None
             if 'timestamp' in json:
@@ -171,7 +171,7 @@ class Client(object):
                 res = json['data']
             return res
         except ValueError:
-            raise KucoinRequestException('Invalid Response: %s' % response.text)
+            raise TesradexRequestException('Invalid Response: %s' % response.text)
 
     def _get(self, path, signed=False, **kwargs):
         return self._request('get', path, signed, **kwargs)
@@ -198,7 +198,7 @@ class Client(object):
     def create_api_key(self):
         """Create a new API Key
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/user-api-management/create-api-key
+        https://tesradexapidocs.docs.apiary.io/#reference/0/user-api-management/create-api-key
 
         .. code:: python
 
@@ -219,7 +219,7 @@ class Client(object):
                 "permissions": null
             }
 
-        :raises:  KucoinResponseException, KucoinAPIException
+        :raises:  TesradexResponseException, TesradexAPIException
 
         """
 
@@ -228,7 +228,7 @@ class Client(object):
     def update_api_key(self, key, enabled=None, remark=None, permissions=None):
         """Update an API Key
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/user-api-management/update-api-key
+        https://tesradexapidocs.docs.apiary.io/#reference/0/user-api-management/update-api-key
 
         :param key: API Key string
         :type key: string
@@ -245,7 +245,7 @@ class Client(object):
 
         :returns: True on success
 
-        :raises:  KucoinResponseException, KucoinAPIException
+        :raises:  TesradexResponseException, TesradexAPIException
 
         """
 
@@ -264,7 +264,7 @@ class Client(object):
     def get_api_keys(self):
         """Get list of API Keys
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/user-api-management/list-api-key
+        https://tesradexapidocs.docs.apiary.io/#reference/0/user-api-management/list-api-key
 
         .. code:: python
 
@@ -286,7 +286,7 @@ class Client(object):
                 }
             ]
 
-        :raises:  KucoinResponseException, KucoinAPIException
+        :raises:  TesradexResponseException, TesradexAPIException
 
         """
 
@@ -295,7 +295,7 @@ class Client(object):
     def delete_api_key(self, key):
         """Update an API Key
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/user-api-management/delete-api-key
+        https://tesradexapidocs.docs.apiary.io/#reference/0/user-api-management/delete-api-key
 
         :param key: API Key string
         :type key: string
@@ -306,7 +306,7 @@ class Client(object):
 
         :returns: True on success
 
-        :raises:  KucoinResponseException, KucoinAPIException
+        :raises:  TesradexResponseException, TesradexAPIException
 
         """
 
@@ -321,7 +321,7 @@ class Client(object):
     def get_currencies(self, coins=None):
         """List the exchange rate of coins
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/currencies-plugin/list-exchange-rate-of-coins(open)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/currencies-plugin/list-exchange-rate-of-coins(open)
 
         :param coins: optional - Comma separated list of coins to get exchange rate for
         :type coins: string or list
@@ -395,7 +395,7 @@ class Client(object):
                 }
             }
 
-        :raises:  KucoinResponseException, KucoinAPIException
+        :raises:  TesradexResponseException, TesradexAPIException
 
         """
 
@@ -412,7 +412,7 @@ class Client(object):
 
         Get a list of available currency from the get_currencies call
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/currencies-plugin/set-default-currency
+        https://tesradexapidocs.docs.apiary.io/#reference/0/currencies-plugin/set-default-currency
 
         :param currency: Currency string e.g USD,CNY,JPY
         :type currency: string
@@ -436,7 +436,7 @@ class Client(object):
     def get_languages(self):
         """List of supported languages
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/language/list-languages(open)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/language/list-languages(open)
 
         .. code:: python
 
@@ -459,7 +459,7 @@ class Client(object):
                 ]
             ]
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -470,7 +470,7 @@ class Client(object):
     def update_language(self, language):
         """Change the language for your account.
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/language/change-language
+        https://tesradexapidocs.docs.apiary.io/#reference/0/language/change-language
 
         :param language: Language string - see get_languages() for values
         :type language: string
@@ -481,7 +481,7 @@ class Client(object):
 
         :returns: None
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -493,7 +493,7 @@ class Client(object):
     def get_user(self):
         """Get user info
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/user/get-user-info
+        https://tesradexapidocs.docs.apiary.io/#reference/0/user/get-user-info
 
         .. code:: python
 
@@ -524,7 +524,7 @@ class Client(object):
                 "email": "robert2041@163.com"
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -535,7 +535,7 @@ class Client(object):
     def get_invite_count(self):
         """Get invite count
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/inviting-promotion/get-inviting-count
+        https://tesradexapidocs.docs.apiary.io/#reference/0/inviting-promotion/get-inviting-count
 
         .. code:: python
 
@@ -551,7 +551,7 @@ class Client(object):
                 "countThree": 60
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -560,7 +560,7 @@ class Client(object):
     def get_reward_info(self, coin=None):
         """Get promotion reward info all coins or an individual coin
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/inviting-promotion/get-promotion-reward-info
+        https://tesradexapidocs.docs.apiary.io/#reference/0/inviting-promotion/get-promotion-reward-info
 
         :param coin: optional - Name of coin to get reward info
         :type coin: string
@@ -583,7 +583,7 @@ class Client(object):
                 "grantCountDownSeconds": 604800
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -596,7 +596,7 @@ class Client(object):
     def get_reward_summary(self, coin=None):
         """Get promotion reward summary for all coins or a specific coin
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/inviting-promotion/get-promotion-reward-summary
+        https://tesradexapidocs.docs.apiary.io/#reference/0/inviting-promotion/get-promotion-reward-summary
 
         :param coin: optional - Name of coin to get reward summary
         :type coin: string
@@ -628,7 +628,7 @@ class Client(object):
                 }
             ]
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -641,7 +641,7 @@ class Client(object):
     def extract_invite_bonus(self, coin=None):
         """Extract the invitation bonus for all coins or a specific coin
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/invitation-bonus/extract-invitation-bonus
+        https://tesradexapidocs.docs.apiary.io/#reference/0/invitation-bonus/extract-invitation-bonus
 
         :param coin: optional - Name of coin to extract the invitation bonus
         :type coin: string
@@ -662,7 +662,7 @@ class Client(object):
                 "count": 0  # The number of successful extracted
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -677,7 +677,7 @@ class Client(object):
     def get_deposit_address(self, coin):
         """Get deposit address for a coin
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/assets-operation/get-coin-deposit-address
+        https://tesradexapidocs.docs.apiary.io/#reference/0/assets-operation/get-coin-deposit-address
 
         :param coin: Name of coin
         :type coin: string
@@ -702,7 +702,7 @@ class Client(object):
                 "lastReceivedAt": 1502276446000
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -711,7 +711,7 @@ class Client(object):
     def create_withdrawal(self, coin, amount, address):
         """Get deposit address for a coin
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/assets-operation/create-withdrawal
+        https://tesradexapidocs.docs.apiary.io/#reference/0/assets-operation/create-withdrawal
 
         :param coin: Name of coin
         :type coin: string
@@ -726,7 +726,7 @@ class Client(object):
 
         :returns: None
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -740,7 +740,7 @@ class Client(object):
     def cancel_withdrawal(self, coin, txid):
         """Cancel a withdrawal
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/assets-operation/cancel-withdrawal
+        https://tesradexapidocs.docs.apiary.io/#reference/0/assets-operation/cancel-withdrawal
 
         :param coin: Name of coin
         :type coin: string
@@ -753,7 +753,7 @@ class Client(object):
 
         :returns: None
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -766,7 +766,7 @@ class Client(object):
     def get_deposits(self, coin, status=None, limit=None, page=None):
         """Get deposit records for a coin
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/assets-operation/list-deposit-&-withdrawal-records
+        https://tesradexapidocs.docs.apiary.io/#reference/0/assets-operation/list-deposit-&-withdrawal-records
 
         :param coin: Name of coin
         :type coin: string
@@ -823,7 +823,7 @@ class Client(object):
                 "startRow": 0
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -842,7 +842,7 @@ class Client(object):
     def get_withdrawals(self, coin, status=None, limit=None, page=None):
         """Get withdrawal records for a coin
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/assets-operation/list-deposit-&-withdrawal-records
+        https://tesradexapidocs.docs.apiary.io/#reference/0/assets-operation/list-deposit-&-withdrawal-records
 
         :param coin: Name of coin
         :type coin: string
@@ -899,7 +899,7 @@ class Client(object):
                 "startRow": 0
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -918,7 +918,7 @@ class Client(object):
     def get_coin_balance(self, coin):
         """Get balance of a coin
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/assets-operation/get-balance-of-coin
+        https://tesradexapidocs.docs.apiary.io/#reference/0/assets-operation/get-balance-of-coin
 
         :param coin: Name of coin
         :type coin: string
@@ -937,7 +937,7 @@ class Client(object):
                 freezeBalance: 321321
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -966,7 +966,7 @@ class Client(object):
                 }
             ]
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -977,7 +977,7 @@ class Client(object):
     def get_all_balances_paged(self, limit=None, page=None):
         """Get all coin balances with paging if that's what you want
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/assets-operation/get-all-balance
+        https://tesradexapidocs.docs.apiary.io/#reference/0/assets-operation/get-all-balance
 
         :param limit: optional - Number of balances default 12, max 20
         :type limit: int
@@ -1006,7 +1006,7 @@ class Client(object):
                 }
             ]
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1034,7 +1034,7 @@ class Client(object):
 
         :returns: float balance value
 
-        :raises: Exception, KucoinResponseException, KucoinAPIException
+        :raises: Exception, TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1067,7 +1067,7 @@ class Client(object):
     def create_order(self, symbol, order_type, price, amount):
         """Create an order
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/trading/create-an-order
+        https://tesradexapidocs.docs.apiary.io/#reference/0/trading/create-an-order
 
         :param symbol: Name of symbol e.g. KCS-BTC
         :type symbol: string
@@ -1090,7 +1090,7 @@ class Client(object):
                 "orderOid": "596186ad07015679730ffa02"
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1106,7 +1106,7 @@ class Client(object):
     def create_buy_order(self, symbol, price, amount):
         """Create a buy order
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/trading/create-an-order
+        https://tesradexapidocs.docs.apiary.io/#reference/0/trading/create-an-order
 
         :param symbol: Name of symbol e.g. KCS-BTC
         :type symbol: string
@@ -1127,7 +1127,7 @@ class Client(object):
                 "orderOid": "596186ad07015679730ffa02"
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1136,7 +1136,7 @@ class Client(object):
     def create_sell_order(self, symbol, price, amount):
         """Create a sell order
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/trading/create-an-order
+        https://tesradexapidocs.docs.apiary.io/#reference/0/trading/create-an-order
 
         :param symbol: Name of symbol e.g. KCS-BTC
         :type symbol: string
@@ -1157,7 +1157,7 @@ class Client(object):
                 "orderOid": "596186ad07015679730ffa02"
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1166,7 +1166,7 @@ class Client(object):
     def get_active_orders(self, symbol, kv_format=False):
         """Get list of active orders
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/trading/list-active-orders
+        https://tesradexapidocs.docs.apiary.io/#reference/0/trading/list-active-orders
 
         :param symbol: Name of symbol e.g. KCS-BTC
         :type symbol: string
@@ -1259,7 +1259,7 @@ class Client(object):
                 }
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1276,9 +1276,9 @@ class Client(object):
     def cancel_order(self, order_id, order_type, symbol=None):
         """Cancel an order
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/trading/cancel-orders
+        https://tesradexapidocs.docs.apiary.io/#reference/0/trading/cancel-orders
 
-        Note: The Kucoin documentation is incorrect, the symbol parameter goes in the body not the query string
+        Note: The Tesradex documentation is incorrect, the symbol parameter goes in the body not the query string
 
         :param order_id: Order id
         :type order_id: string
@@ -1295,9 +1295,9 @@ class Client(object):
 
         :returns: None on success
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
-        KucoinAPIException If order_id is not found
+        TesradexAPIException If order_id is not found
 
         """
 
@@ -1315,9 +1315,9 @@ class Client(object):
     def cancel_all_orders(self, symbol=None, order_type=None):
         """Cancel all orders
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/trading/cancel-all-orders
+        https://tesradexapidocs.docs.apiary.io/#reference/0/trading/cancel-all-orders
 
-        Note: The Kucoin documentation is incorrect, the symbol parameter goes in the body not the query string
+        Note: The Tesradex documentation is incorrect, the symbol parameter goes in the body not the query string
 
         :param symbol: Name of symbol e.g. KCS-BTC
         :type symbol: string
@@ -1334,7 +1334,7 @@ class Client(object):
 
         :returns: None on success
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1349,7 +1349,7 @@ class Client(object):
     def get_dealt_orders(self, symbol=None, order_type=None, limit=None, page=None, since=None, before=None):
         """Get a list of dealt orders with pagination
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/trading/list-dealt-orders(merged)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/trading/list-dealt-orders(merged)
 
         :param symbol: Name of symbol e.g. KCS-BTC
         :type symbol: string
@@ -1408,7 +1408,7 @@ class Client(object):
                 "page": 1
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1433,7 +1433,7 @@ class Client(object):
 
         Does not return symbol info in response, unlike get_dealt_orders
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/trading/list-dealt-orders(specific-symbol)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/trading/list-dealt-orders(specific-symbol)
 
         :param symbol: Name of symbol e.g. KCS-BTC
         :type symbol: string
@@ -1491,7 +1491,7 @@ class Client(object):
                 "lastPage": false
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1510,7 +1510,7 @@ class Client(object):
     def get_order_details(self, symbol, order_type, limit=None, page=None, order_id=None):
         """Get order details
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/trading/order-details
+        https://tesradexapidocs.docs.apiary.io/#reference/0/trading/order-details
 
         :param symbol: Name of symbol e.g. KCS-BTC
         :type symbol: string
@@ -1569,7 +1569,7 @@ class Client(object):
                 "pendingAmount": 187.34
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1591,7 +1591,7 @@ class Client(object):
     def get_tick(self, symbol=None):
         """Get all ticks or a symbol tick
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/tick(open)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/tick(open)
 
         :param symbol: optional - Name of symbol e.g. KCS-BTC
         :type symbol: string
@@ -1649,7 +1649,7 @@ class Client(object):
                 "changeRate": -0.2642
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1662,7 +1662,7 @@ class Client(object):
     def get_order_book(self, symbol, group=None, limit=None):
         """Get the order book for a symbol
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/order-books(open)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/order-books(open)
 
         :param symbol: Name of symbol e.g. KCS-BTC
         :type symbol: string
@@ -1706,7 +1706,7 @@ class Client(object):
                 ]
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1723,7 +1723,7 @@ class Client(object):
     def get_buy_orders(self, symbol, group=None, limit=None):
         """Get the buy orders for a symbol
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/buy-order-books(open)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/buy-order-books(open)
 
         :param symbol: Name of symbol e.g. KCS-BTC
         :type symbol: string
@@ -1753,7 +1753,7 @@ class Client(object):
                 ]
             ]
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1770,7 +1770,7 @@ class Client(object):
     def get_sell_orders(self, symbol, group=None, limit=None):
         """Get the sell orders for a symbol
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/sell-order-books(open)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/sell-order-books(open)
 
         :param symbol: Name of symbol e.g. KCS-BTC
         :type symbol: string
@@ -1800,7 +1800,7 @@ class Client(object):
                 ]
             ]
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1817,7 +1817,7 @@ class Client(object):
     def get_recent_orders(self, symbol, limit=None, since=None):
         """Get recent orders
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/recently-deal-orders(open)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/recently-deal-orders(open)
 
         :param symbol: Name of symbol e.g. KCS-BTC
         :type symbol: string
@@ -1853,7 +1853,7 @@ class Client(object):
                     593214
                 ]
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1870,7 +1870,7 @@ class Client(object):
     def get_trading_markets(self):
         """Get list of trading markets
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/list-trading-markets(open)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/list-trading-markets(open)
 
         .. code:: python
 
@@ -1887,7 +1887,7 @@ class Client(object):
                 "USDT"
             ]
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1896,7 +1896,7 @@ class Client(object):
     def get_trading_symbols(self, market=None):
         """Get list of trading symbols for an optional market
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/list-trading-symbols(open)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/list-trading-symbols(open)
 
         :param market: Name of market e.g. BTC
         :type market: string
@@ -1948,7 +1948,7 @@ class Client(object):
                 }
             ]
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -1961,7 +1961,7 @@ class Client(object):
     def get_trending_coins(self, market=None):
         """Get list of trending coins for an optional market
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/list-trendings(open)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/list-trendings(open)
 
         :param market: Name of market e.g. BTC
         :type market: string
@@ -2002,7 +2002,7 @@ class Client(object):
                 }
             ]
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
         data = {}
@@ -2027,7 +2027,7 @@ class Client(object):
         :param limit: optional - Number of results
         :type limit: int
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/get-kline-data(open)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/get-kline-data(open)
 
         .. code:: python
 
@@ -2061,14 +2061,14 @@ class Client(object):
                 }
             ]
 
-        :raises: KucoinResponseException, KucoinAPIException, KucoinResolutionException
+        :raises: TesradexResponseException, TesradexAPIException, TesradexResolutionException
 
         """
 
         try:
             resolution = self._resolution_map[resolution]
         except KeyError:
-            raise KucoinResolutionException('Invalid resolution passed')
+            raise TesradexResolutionException('Invalid resolution passed')
 
         data = {
             'symbol': symbol,
@@ -2084,7 +2084,7 @@ class Client(object):
     def get_kline_config_tv(self):
         """Get kline config (TradingView version)
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/get-kline-config(open,-tradingview-version)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/get-kline-config(open,-tradingview-version)
 
         .. code:: python
 
@@ -2111,7 +2111,7 @@ class Client(object):
                 ]
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -2120,12 +2120,12 @@ class Client(object):
     def get_symbol_tv(self, symbol):
         """Get symbol data (TradingView version)
 
-        Note this function doesn't seem to be implemented by Kucoin yet.
+        Note this function doesn't seem to be implemented by Tesradex yet.
 
         :param symbol: Name of symbol e.g. KCS-BTC
         :type symbol: string
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/get-symbol(open,-tradingview-version)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/get-symbol(open,-tradingview-version)
 
         .. code:: python
 
@@ -2164,7 +2164,7 @@ class Client(object):
                 "has_no_volume": true
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -2186,7 +2186,7 @@ class Client(object):
         :param to_time: To timestamp in seconds
         :type to_time: int
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/get-kline-data(open,-tradingview-version)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/get-kline-data(open,-tradingview-version)
 
         .. code:: python
 
@@ -2274,7 +2274,7 @@ class Client(object):
                 ]
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -2355,7 +2355,7 @@ class Client(object):
     def get_coin_info(self, coin):
         """Get info about all coins or a coin
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/get-coin-info(open)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/get-coin-info(open)
 
         .. code:: python
 
@@ -2381,7 +2381,7 @@ class Client(object):
                 "withdrawRemark": ""
             }
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 
@@ -2394,7 +2394,7 @@ class Client(object):
     def get_coin_list(self):
         """Get a list of coins with trade and withdrawal information
 
-        https://kucoinapidocs.docs.apiary.io/#reference/0/market/list-coins(open)
+        https://tesradexapidocs.docs.apiary.io/#reference/0/market/list-coins(open)
 
         .. code:: python
 
@@ -2425,7 +2425,7 @@ class Client(object):
                 }
             ]
 
-        :raises: KucoinResponseException, KucoinAPIException
+        :raises: TesradexResponseException, TesradexAPIException
 
         """
 

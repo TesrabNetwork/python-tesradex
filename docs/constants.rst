@@ -1,7 +1,7 @@
 Constants
 =========
 
-Kucoin defines constants for Redord Types, Order Side, Order Status and Resolution. These are accessible from the Client class.
+Tesradex defines constants for Redord Types, Order Side, Order Status and Resolution. These are accessible from the Client class.
 
 .. code:: python
 
@@ -15,7 +15,7 @@ Kucoin defines constants for Redord Types, Order Side, Order Status and Resoluti
     SIDE_BUY = 'BUY'
     SIDE_SELL = 'SELL'
 
-    # Kucoin has 2 kline endpoint and they have been setup to take the below values
+    # Tesradex has 2 kline endpoint and they have been setup to take the below values
 
     RESOLUTION_1MINUTE = '1'
     RESOLUTION_5MINUTES = '5'
@@ -30,6 +30,6 @@ Use in your code like below.
 
 .. code:: python
 
-    from kucoin.client import Client
+    from tesradex.client import Client
 
     order_side = Client.SIDE_BUY

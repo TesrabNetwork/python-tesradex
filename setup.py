@@ -2,16 +2,16 @@
 from setuptools import setup
 
 setup(
-    name='python-kucoin',
+    name='python-tesradex',
     version='0.1.11',
-    packages=['kucoin'],
-    description='Kucoin REST API python implementation',
-    url='https://github.com/sammchardy/python-kucoin',
+    packages=['tesradex'],
+    description='Tesradex REST API python implementation',
+    url='https://github.com/sammchardy/python-tesradex',
     author='Sam McHardy',
     license='MIT',
     author_email='',
     install_requires=['requests', 'dateparser'],
-    keywords='kucoin exchange rest api bitcoin ethereum btc eth kcs',
+    keywords='tesradex exchange rest api bitcoin ethereum btc eth kcs',
     classifiers=[
           'Intended Audience :: Developers',
           'License :: OSI Approved :: MIT License',
