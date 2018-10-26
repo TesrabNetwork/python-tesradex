@@ -85,7 +85,7 @@ If you use `Javascript <https://www.javascript.com/>`_ check out the `Javascript
 If you use `Java <https://www.oracle.com/java/>`_ check out the `Java-Tesradex <https://github.com/TesrabNetwork/Java-Tesradex>`_ library.
 
 If you use `C <https://www.cprogramming.com/tutorial/c-tutorial.html`_
-or `CPP <https://www.cprogramming.com/tutorial/c++-tutorial.html>`_ check out the `PHP-Tesradex <https://github.com/sammchardy/python-quoine>`_ library.
+or `CPP <https://www.cprogramming.com/tutorial/c++-tutorial.html>`_ check out the `PHP-Tesradex <https://github.com/TesrabNetwork/CPP-Tesradex>`_ library.
 
 If you use `Go <https://idex.market>`_ check out the `Go-Tesradex <https://github.com/sammchardy/python-idex>`_ library.
 
