@@ -91,4 +91,3 @@ If you use `Go <https://idex.market>`_ check out the `Go-Tesradex <https://githu
 
 If you use `C/CPP <https://big.one>`_ check out the `C/CPP-Tesradex <https://github.com/sammchardy/python-bigone>`_ library.
 
-.. image:: https://analytics-pixel.appspot.com/UA-111417213-1/github/python-tesradex?pixel
