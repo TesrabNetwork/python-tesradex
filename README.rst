@@ -80,7 +80,7 @@ For more `check out the documentation <https://python-tesradex.readthedocs.io/en
 Other Languages
 ---------------
 
-If you use `Javascript <https://www.binance.com/?ref=10099792>`_ check out my `python-binance <https://github.com/sammchardy/python-binance>`_ library.
+If you use `Javascript <https://www.binance.com/?ref=10099792>`_ check out the `Javascript-Tesradex <https://github.com/sammchardy/python-binance>`_ library.
 
 If you use `Java <https://www.allcoin.com/Account/RegisterByPhoneNumber/?InviteCode=MTQ2OTk4MDgwMDEzNDczMQ==>`_ check out my `python-allucoin <https://github.com/sammchardy/python-allcoin>`_ library.
 
