@@ -84,10 +84,10 @@ If you use `Javascript <https://www.javascript.com/>`_ check out the `Javascript
 
 If you use `Java <https://www.oracle.com/java/>`_ check out the `Java-Tesradex <https://github.com/TesrabNetwork/Java-Tesradex>`_ library.
 
-If you use `PHP <https://accounts.quoinex.com/sign-up?affiliate=PAxghztC67615>`_
-or `Qryptos <https://accounts.qryptos.com/sign-up?affiliate=PAxghztC67615>`_ check out the `PHP-Tesradex <https://github.com/sammchardy/python-quoine>`_ library.
+If you use `C <https://secure.php.net/`_
+or `CPP <https://accounts.qryptos.com/sign-up?affiliate=PAxghztC67615>`_ check out the `PHP-Tesradex <https://github.com/sammchardy/python-quoine>`_ library.
 
 If you use `Go <https://idex.market>`_ check out the `Go-Tesradex <https://github.com/sammchardy/python-idex>`_ library.
 
-If you use `C/CPP <https://big.one>`_ check out the `C/CPP-Tesradex <https://github.com/sammchardy/python-bigone>`_ library.
+If you use `PHP <https://big.one>`_ check out the `C/CPP-Tesradex <https://github.com/sammchardy/python-bigone>`_ library.
 
