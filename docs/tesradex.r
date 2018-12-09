@@ -4,7 +4,7 @@ Kucoin API
 client module
 ----------------------
 
-.. automodule:: kucoin.client
+.. automodule:: tesradex.client
     :members:
     :undoc-members:
     :show-inheritance:
