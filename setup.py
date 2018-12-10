@@ -6,7 +6,7 @@ setup(
     version='0.1.11',
     packages=['tesradex'],
     description='Tesradex REST API python implementation',
-    url='https://github.com/sammchardy/python-tesradex',
+    url='https://github.com/TesrabNetwork/python-tesradex',
     author='Sam McHardy',
     license='MIT',
     author_email='',
