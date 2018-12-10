@@ -9,7 +9,7 @@ setup(
     url='https://github.com/TesrabNetwork/python-tesradex',
     author='Tesrab Network',
     license='MIT',
-    author_email='',
+    author_email='info@tersab.network',
     install_requires=['requests', 'dateparser'],
     keywords='tesradex exchange rest api bitcoin ethereum btc eth kcs',
     classifiers=[
