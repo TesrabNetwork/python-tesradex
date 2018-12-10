@@ -7,7 +7,7 @@ setup(
     packages=['tesradex'],
     description='Tesradex REST API python implementation',
     url='https://github.com/TesrabNetwork/python-tesradex',
-    author='Sam McHardy',
+    author='Tesrab Network',
     license='MIT',
     author_email='',
     install_requires=['requests', 'dateparser'],
