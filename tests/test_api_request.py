@@ -46,8 +46,8 @@ def test_api_error_exception():
                 "message": "No message available",
                 "path": "/open/chart/symbol"
             }
-            m.get('https://api.tesradex.com/v1/open/chart/symbol?symbol=KCS-BTC', json=json_obj, status_code=400)
-            client.get_symbol_tv('KCS-BTC')
+            m.get('https://api.tesradex.com/v1/open/chart/symbol?symbol=TDEX-BTC', json=json_obj, status_code=400)
+            client.get_symbol_tv('TDEX-BTC')
 
 
 def test_api_200_exception():
