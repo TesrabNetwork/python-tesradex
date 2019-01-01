@@ -1284,7 +1284,7 @@ class Client(object):
         :type order_id: string
         :param order_type: Order type
         :type order_type: string
-        :param symbol: optional - Name of symbol e.g. KCS-BTC
+        :param symbol: optional - Name of symbol e.g. TDEX-BTC
         :type symbol: string
 
         .. code:: python
