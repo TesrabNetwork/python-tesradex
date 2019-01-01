@@ -1291,7 +1291,7 @@ class Client(object):
 
             client.cancel_order(1)
 
-            client.cancel_order(1, 'KCS-BTC', 'BUY')
+            client.cancel_order(1, 'TDEX-BTC', 'BUY')
 
         :returns: None on success
 
