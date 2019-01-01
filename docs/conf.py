@@ -50,8 +50,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'python-tesradex'
-copyright = '2017, Sam McHardy'
-author = 'Sam McHardy'
+copyright = '2018, realChain'
+author = ''
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
