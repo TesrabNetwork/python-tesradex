@@ -1178,7 +1178,7 @@ class Client(object):
             orders = client.get_active_orders('TDEX-BTC')
 
             # return orders in KV format
-            orders_kv = client.get_active_orders('KCS-BTC', True)
+            orders_kv = client.get_active_orders('TDEX-BTC', True)
 
         :returns: ApiResponse
 
