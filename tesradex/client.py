@@ -1080,7 +1080,7 @@ class Client(object):
 
         .. code:: python
 
-            transaction = client.create_order('KCS-BTC', Client.SIDE_BUY, '0.01', '1000')
+            transaction = client.create_order('TDEX-BTC', Client.SIDE_BUY, '0.01', '1000')
 
         :returns: ApiResponse
 
