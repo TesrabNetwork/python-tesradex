@@ -1147,7 +1147,7 @@ class Client(object):
 
         .. code:: python
 
-            transaction = client.create_sell_order('KCS-BTC', '0.01', '1000')
+            transaction = client.create_sell_order('TDEX-BTC', '0.01', '1000')
 
         :returns: ApiResponse
 
@@ -1168,7 +1168,7 @@ class Client(object):
 
         https://tesradexapidocs.docs.apiary.io/#reference/0/trading/list-active-orders
 
-        :param symbol: Name of symbol e.g. KCS-BTC
+        :param symbol: Name of symbol e.g. TDEX-BTC
         :type symbol: string
         :param kv_format: optional - whether to return as kv format or not
         :type kv_format: bool
