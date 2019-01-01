@@ -1138,7 +1138,7 @@ class Client(object):
 
         https://tesradexapidocs.docs.apiary.io/#reference/0/trading/create-an-order
 
-        :param symbol: Name of symbol e.g. KCS-BTC
+        :param symbol: Name of symbol e.g. TDEX-BTC
         :type symbol: string
         :param price: Name of coin
         :type price: string
