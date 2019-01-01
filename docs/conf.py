@@ -147,7 +147,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'python-tesradex.tex', 'python-tesradex Documentation',
-     'Sam McHardy', 'manual'),
+     '', 'manual'),
 ]
 
 
