@@ -1175,7 +1175,7 @@ class Client(object):
 
         .. code:: python
 
-            orders = client.get_active_orders('KCS-BTC')
+            orders = client.get_active_orders('TDEX-BTC')
 
             # return orders in KV format
             orders_kv = client.get_active_orders('KCS-BTC', True)
