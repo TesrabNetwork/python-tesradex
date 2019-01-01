@@ -1231,7 +1231,7 @@ class Client(object):
                             "oid": "59e59b279bd8d31d093d956e",
                             "type": "SELL",
                             "userOid": null,
-                            "coinType": "KCS",
+                            "coinType": "TDEX",
                             "coinTypePair": "BTC",
                             "direction": "SELL",
                             "price": 0.1,
