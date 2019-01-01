@@ -925,7 +925,7 @@ class Client(object):
 
         .. code:: python
 
-            balance = client.get_coin_balance('KCS')
+            balance = client.get_coin_balance('TDEX')
 
         :returns: ApiResponse
 
