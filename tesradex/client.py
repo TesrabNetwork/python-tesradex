@@ -652,7 +652,7 @@ class Client(object):
             user = client.extract_invite_bonus()
 
             # specific coin
-            user = client.extract_invite_bonus('KCS')
+            user = client.extract_invite_bonus('TDEX')
 
         :returns: ApiResponse
 
