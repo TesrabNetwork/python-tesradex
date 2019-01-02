@@ -1633,7 +1633,7 @@ class Client(object):
         .. code:: python
 
             {
-                "coinType": "KCS",
+                "coinType": "TDEX",
                 "trading": true,
                 "lastDealPrice": 5040,
                 "buy": 5000,
