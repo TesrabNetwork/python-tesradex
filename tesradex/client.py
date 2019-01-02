@@ -1525,7 +1525,7 @@ class Client(object):
 
         .. code:: python
 
-            orders = client.get_order_details('KCS-BTC', Client.SIDE_SELL)
+            orders = client.get_order_details('TDEX-BTC', Client.SIDE_SELL)
 
         :returns: ApiResponse
 
