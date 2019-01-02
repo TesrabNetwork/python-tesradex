@@ -1781,7 +1781,7 @@ class Client(object):
 
         .. code:: python
 
-            orders = client.get_sell_orders('KCS-BTC', limit=50)
+            orders = client.get_sell_orders('TDEX-BTC', limit=50)
 
         :returns: ApiResponse
 
