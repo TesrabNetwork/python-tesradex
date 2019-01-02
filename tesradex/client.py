@@ -1831,7 +1831,7 @@ class Client(object):
             orders = client.get_recent_trades('TDEX-BTC')
 
             # optional limit parameter
-            orders = client.get_recent_trades('KCS-BTC', limit=20)
+            orders = client.get_recent_trades('TDEX-BTC', limit=20)
 
         :returns: ApiResponse
 
