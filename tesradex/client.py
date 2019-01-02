@@ -1532,7 +1532,7 @@ class Client(object):
         .. code:: python
 
             {
-                "coinType": "KCS",
+                "coinType": "TDEX",
                 "dealValueTotal": 0.00938022,
                 "dealPriceAverage": 0.0001009,
                 "feeTotal": 2e-8,
