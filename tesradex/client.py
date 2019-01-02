@@ -1725,7 +1725,7 @@ class Client(object):
 
         https://tesradexapidocs.docs.apiary.io/#reference/0/market/buy-order-books(open)
 
-        :param symbol: Name of symbol e.g. KCS-BTC
+        :param symbol: Name of symbol e.g. TDEX-BTC
         :type symbol: string
         :param group: optional - sets the price display precision - valid values (1-8)
         :type group: int
