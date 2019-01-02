@@ -1329,7 +1329,7 @@ class Client(object):
             # cancel all active orders
             client.cancel_all_orders()
 
-            # cancel all KCS-BTC Buy orders
+            # cancel all TDEX-BTC Buy orders
             client.cancel_all_orders('KCS-BTC', 'BUY')
 
         :returns: None on success
