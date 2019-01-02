@@ -1819,7 +1819,7 @@ class Client(object):
 
         https://tesradexapidocs.docs.apiary.io/#reference/0/market/recently-deal-orders(open)
 
-        :param symbol: Name of symbol e.g. KCS-BTC
+        :param symbol: Name of symbol e.g. TDEX-BTC
         :type symbol: string
         :param limit: optional - Number of orders to return. Limit overrides since parameter
         :type limit: int
