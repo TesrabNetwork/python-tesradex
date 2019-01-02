@@ -1398,7 +1398,7 @@ class Client(object):
                         "feeRate": 0,
                         "oid": "59e59ac49bd8d31d09f85fa7",
                         "orderOid": "59e41c949bd8d374c9956c74",
-                        "coinType": "KCS",
+                        "coinType": "TDEX",
                         "coinTypePair": "BTC",
                         "direction": "SELL",
                         "dealDirection": "BUY"
