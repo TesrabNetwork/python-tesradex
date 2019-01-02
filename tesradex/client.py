@@ -1593,7 +1593,7 @@ class Client(object):
 
         https://tesradexapidocs.docs.apiary.io/#reference/0/market/tick(open)
 
-        :param symbol: optional - Name of symbol e.g. KCS-BTC
+        :param symbol: optional - Name of symbol e.g. TDEX-BTC
         :type symbol: string
 
         .. code:: python
