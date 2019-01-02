@@ -1330,7 +1330,7 @@ class Client(object):
             client.cancel_all_orders()
 
             # cancel all TDEX-BTC Buy orders
-            client.cancel_all_orders('KCS-BTC', 'BUY')
+            client.cancel_all_orders('TDEX-BTC', 'BUY')
 
         :returns: None on success
 
