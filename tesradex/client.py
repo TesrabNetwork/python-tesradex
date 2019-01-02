@@ -1319,7 +1319,7 @@ class Client(object):
 
         Note: The Tesradex documentation is incorrect, the symbol parameter goes in the body not the query string
 
-        :param symbol: Name of symbol e.g. KCS-BTC
+        :param symbol: Name of symbol e.g. TDEX-BTC
         :type symbol: string
         :param order_type: Order type
         :type order_type: string
