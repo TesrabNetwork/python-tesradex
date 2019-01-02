@@ -1828,7 +1828,7 @@ class Client(object):
 
         .. code:: python
 
-            orders = client.get_recent_trades('KCS-BTC')
+            orders = client.get_recent_trades('TDEX-BTC')
 
             # optional limit parameter
             orders = client.get_recent_trades('KCS-BTC', limit=20)
