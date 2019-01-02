@@ -1601,7 +1601,7 @@ class Client(object):
             # get all ticks
             ticks = client.get_tick()
 
-            tick = client.get_tick('KCS-BTC')
+            tick = client.get_tick('TDEX-BTC')
 
         :returns: ApiResponse
 
