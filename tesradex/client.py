@@ -1446,7 +1446,7 @@ class Client(object):
 
         .. code:: python
 
-            orders = client.get_symbol_dealt_orders('KCS-BTC', Client.SIDE_SELL, limit=10, page=2)
+            orders = client.get_symbol_dealt_orders('TDEX-BTC', Client.SIDE_SELL, limit=10, page=2)
 
         :returns: ApiResponse
 
