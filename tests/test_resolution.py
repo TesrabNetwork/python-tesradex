@@ -13,4 +13,4 @@ def test_resolution_exception():
 
     with pytest.raises(TesradexResolutionException):
 
-        client.get_kline_data('-BTC', 'invalid-res', 1510156800, 1510278278)
+        client.get_kline_data('TDEX-BTC', 'invalid-res', 1510156800, 1510278278)
