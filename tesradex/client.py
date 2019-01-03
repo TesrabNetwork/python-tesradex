@@ -2136,7 +2136,7 @@ class Client(object):
         .. code:: python
 
             {
-                "ticker": "KCS-BTC",
+                "ticker": "TDEX-BTC",
                 "minmov": 1,
                 "minmov2": 0,
                 "session": "24x7",
