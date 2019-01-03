@@ -1906,7 +1906,7 @@ class Client(object):
             # get all trading symbols
             coins = client.get_trading_symbols()
 
-            # get KCS trading symbols
+            # get TDEX trading symbols
             coins = client.get_trading_symbols('KCS)
 
         :returns: ApiResponse
