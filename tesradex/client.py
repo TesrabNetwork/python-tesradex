@@ -2177,7 +2177,7 @@ class Client(object):
     def get_kline_data_tv(self, symbol, resolution, from_time, to_time):
         """Get kline data (TradingView version)
 
-        :param symbol: Name of symbol e.g. KCS-BTC
+        :param symbol: Name of symbol e.g. TDEX-BTC
         :type symbol: string
         :param resolution: Data resolution from RESOLUTION_* types
         :type resolution: string
