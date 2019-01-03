@@ -2129,7 +2129,7 @@ class Client(object):
 
         .. code:: python
 
-            symbol = client.get_symbol_tv('KCS-BTC')
+            symbol = client.get_symbol_tv('TDEX-BTC')
 
         :returns: ApiResponse
 
