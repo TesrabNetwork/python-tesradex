@@ -2142,7 +2142,7 @@ class Client(object):
                 "session": "24x7",
                 "timezone": "Asia/Shanghai",
                 "has_intraday": true,
-                "description": "KCS-BTC",
+                "description": "TDEX-BTC",
                 "supported_resolutions": [
                     "1",
                     "5",
