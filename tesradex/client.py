@@ -2016,7 +2016,7 @@ class Client(object):
 
         Validates resolution value is correct
 
-        :param symbol: Name of symbol e.g. KCS-BTC
+        :param symbol: Name of symbol e.g. TDEX-BTC
         :type symbol: string
         :param resolution: Data resolution from RESOLUTION_* types
         :type resolution: string
