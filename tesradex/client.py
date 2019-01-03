@@ -2158,7 +2158,7 @@ class Client(object):
                 "exchange-listed": "",
                 "volume_precision": 8,
                 "pointvalue": 1,
-                "name": "KCS-BTC",
+                "name": "TDEX-BTC",
                 "exchange-traded": "",
                 "pricescale": 100000000,
                 "has_no_volume": true
