@@ -2190,7 +2190,7 @@ class Client(object):
 
         .. code:: python
 
-            klines = client.get_kline_data_tv('KCS-BTC', Client.RESOLUTION_1MINUTE, 1507479171, 1510278278)
+            klines = client.get_kline_data_tv('TDEX-BTC', Client.RESOLUTION_1MINUTE, 1507479171, 1510278278)
 
         :returns: ApiResponse
 
