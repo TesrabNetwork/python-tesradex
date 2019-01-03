@@ -1915,7 +1915,7 @@ class Client(object):
 
             [
                 {
-                    "coinType": "KCS",
+                    "coinType": "TDEX",
                     "trading": true,
                     "lastDealPrice": 4500,
                     "buy": 4120,
