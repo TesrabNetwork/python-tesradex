@@ -51,7 +51,7 @@ Register an account with `Tesradex <https://www.tesrabnetwrok.com/tesradex`_.
     from_time = 1507479171
     to_time = 1510278278
     klines = client.get_kline_data_tv(
-        'KCS-BTC',
+        'TDEX-BTC',
         Client.RESOLUTION_1MINUTE,
         from_time,
         to_time
