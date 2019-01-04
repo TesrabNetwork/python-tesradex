@@ -61,7 +61,7 @@ Register an account with `Tesradex <https://www.tesrabnetwrok.com/tesradex`_.
     transaction = client.create_buy_order('TDEX-BTC', '0.01', '1000')
 
     # get list of active orders
-    orders = client.get_active_orders('KCS-BTC')
+    orders = client.get_active_orders('TDEX-BTC')
 
     # get historical kline data from any date range
 
