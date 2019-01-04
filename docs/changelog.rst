@@ -13,6 +13,7 @@ v1.0.0 - 2018-03-01
 - add `get_trading_markets` endpoint
 - add `market` param to `get_trading_symbols` and `get_trending_coins`
 - add `get_coin_info` function with optional `coin` param
+- add function `get_historical_klines_tv` to get klines in OHLCV format
 
 **Restored**
 
@@ -82,7 +83,7 @@ v0.1.4 - 2018-01-14
 
 **Added**
 
-- add function `get_historical_klines_tv` to get klines in OHLCV format
+
 
 **Fixed**
 
