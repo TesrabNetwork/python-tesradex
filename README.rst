@@ -2,7 +2,7 @@
 Welcome to python-tesradex v1.0.0
 ================================
 
-This is an unofficial Python wrapper for the `Tesradex exchanges REST API v1 <https://tesradexapidocs.docs.apiary.io/>`_. use at your own risk.
+This is an unofficial Python wrapper for the `Tesradex exchanges REST API v1 <https://tesradexapidocs.docs.apiary.io/>`_. Use at your own risk.
 
 PyPi
   https://pypi.python.org/pypi/python-tesradex
