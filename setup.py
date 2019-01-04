@@ -11,7 +11,7 @@ setup(
     license='MIT',
     author_email='info@tersab.network',
     install_requires=['requests', 'dateparser'],
-    keywords='tesradex exchange rest api bitcoin ethereum btc eth kcs',
+    keywords='tesradex exchange rest api bitcoin ethereum btc eth tdex',
     classifiers=[
           'Intended Audience :: Developers',
           'License :: OSI Approved :: MIT License',
