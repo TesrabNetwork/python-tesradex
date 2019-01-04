@@ -14,6 +14,7 @@ v1.0.0 - 2018-03-01
 - add `market` param to `get_trading_symbols` and `get_trending_coins`
 - add `get_coin_info` function with optional `coin` param
 - add function `get_historical_klines_tv` to get klines in OHLCV format
+- add function `get_total_balance` to get balance in Fiat
 
 **Restored**
 
@@ -95,7 +96,7 @@ v0.1.3 - 2018-01-12
 
 **Added**
 
-- add function `get_total_balance` to get balance in Fiat
+
 - added pagination params to `get_all_balances`
 
 v0.1.2 - 2018-01-07
