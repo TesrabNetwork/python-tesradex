@@ -58,7 +58,7 @@ Register an account with `Tesradex <https://www.tesrabnetwrok.com/tesradex`_.
     )
 
     # place a buy order
-    transaction = client.create_buy_order('KCS-BTC', '0.01', '1000')
+    transaction = client.create_buy_order('TDEX-BTC', '0.01', '1000')
 
     # get list of active orders
     orders = client.get_active_orders('KCS-BTC')
