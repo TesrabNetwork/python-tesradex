@@ -45,7 +45,7 @@ Register an account with `Tesradex <https://www.tesrabnetwrok.com/tesradex`_.
     currencies = client.get_currencies()
 
     # get market depth
-    depth = client.get_order_book('KCS-BTC', limit=50)
+    depth = client.get_order_book('TDEX-BTC', limit=50)
 
     # get symbol klines
     from_time = 1507479171
