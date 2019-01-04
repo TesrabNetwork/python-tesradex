@@ -7,6 +7,12 @@ v1.0.0 - 2018-03-01
 **Added**
 
 - option for passing requests module parameters on Client initialisation
+- better exception error messages
+- constants for transfer types, pending, finished and cancelled
+- documentation for `group` param on `get_order_book`, `get_buy_orders` and `get_sell_orders`
+- add `get_trading_markets` endpoint
+- add `market` param to `get_trading_symbols` and `get_trending_coins`
+- add `get_coin_info` function with optional `coin` param
 
 **Restored**
 
@@ -31,7 +37,7 @@ v0.1.8 - 2018-01-20
 
 **Added**
 
-- better exception error messages
+
 
 **Fixed**
 
@@ -51,11 +57,7 @@ v0.1.6 - 2018-01-15
 
 **Added**
 
-- constants for transfer types, pending, finished and cancelled
-- documentation for `group` param on `get_order_book`, `get_buy_orders` and `get_sell_orders`
-- add `get_trading_markets` endpoint
-- add `market` param to `get_trading_symbols` and `get_trending_coins`
-- add `get_coin_info` function with optional `coin` param
+
 
 **Fixed**
 
