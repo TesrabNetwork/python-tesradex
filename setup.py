@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='python-tesradex',
-    version='0.1.11',
+    version='',
     packages=['tesradex'],
     description='Tesradex REST API python implementation',
     url='https://github.com/TesrabNetwork/python-tesradex',
