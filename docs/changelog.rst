@@ -16,6 +16,7 @@ v1.0.0 - 2018-03-01
 - add function `get_historical_klines_tv` to get klines in OHLCV format
 - add function `get_total_balance` to get balance in Fiat
 - added pagination params to `get_all_balances`
+- api key endpoints
 
 **Restored**
 
@@ -105,7 +106,7 @@ v0.1.2 - 2018-01-07
 
 **Added**
 
-- api key endpoints
+
 - set default currency function
 - extract invite bonus function
 
