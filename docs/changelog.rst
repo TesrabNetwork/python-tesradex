@@ -22,6 +22,7 @@ v1.0.0 - 2018-03-01
 - cancel all orders function
 - get order details function
 - get dealt orders function
+- Tesradex client interface
 
 **Restored**
 
@@ -133,7 +134,7 @@ v0.1.0 - 2017-11-12
 
 **Added**
 
-- Tesradex client interface
+
 - Coverage for all main endpoints
 - Constants for transfer type and status, order side and kline resolution
 - Full documentation
