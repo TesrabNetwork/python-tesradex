@@ -79,7 +79,7 @@ v0.1.6 - 2018-01-15
 **Fixed**
 
 
-- actually use the `kv_format` param on `get_active_orders`
+
 - `cancel_order` format to send symbol in URL
 - `cancel_all_orders` format to send symbol in URL
 - `order_details` removed symbol from URL
