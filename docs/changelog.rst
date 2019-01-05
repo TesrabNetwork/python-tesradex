@@ -77,7 +77,7 @@ v0.1.6 - 2018-01-15
 
 **Fixed**
 
-- set coin param to optional for `get_reward_info`, `get_reward_summary` and `extract_invite_bonus`
+
 - actually use the `kv_format` param on `get_active_orders`
 - `cancel_order` format to send symbol in URL
 - `cancel_all_orders` format to send symbol in URL
