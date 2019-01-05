@@ -18,6 +18,7 @@ v1.0.0 - 2018-03-01
 - added pagination params to `get_all_balances`
 - api key endpoints
 - set default currency function
+- extract invite bonus function
 
 **Restored**
 
@@ -109,7 +110,7 @@ v0.1.2 - 2018-01-07
 
 
 
-- extract invite bonus function
+
 
 v0.1.1 - 2018-01-02
 ^^^^^^^^^^^^^^^^^^^
