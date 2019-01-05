@@ -21,6 +21,7 @@ v1.0.0 - 2018-03-01
 - extract invite bonus function
 - cancel all orders function
 - get order details function
+- get dealt orders function
 
 **Restored**
 
@@ -121,7 +122,7 @@ v0.1.1 - 2018-01-02
 
 
 
-- get dealt orders function
+
 
 **Updated**
 
