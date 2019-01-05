@@ -39,6 +39,7 @@ v0.1.10 - 2018-02-10
 - remove slash in path in `get_order_details` function
 - `cancel_order` format to make `order_type` required
 - `cancel_order` format to send symbol in payload, remove URL params
+- `cancel_all_orders` format to send symbol in payload, remove URL params
 
 v0.1.9 - 2018-02-09
 ^^^^^^^^^^^^^^^^^^^
