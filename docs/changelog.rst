@@ -41,6 +41,7 @@ v0.1.10 - 2018-02-10
 - `cancel_order` format to send symbol in payload, remove URL params
 - `cancel_all_orders` format to send symbol in payload, remove URL params
 - set coin param to optional for `get_reward_info`, `get_reward_summary` and `extract_invite_bonus`
+- actually use the `kv_format` param on `get_active_orders`
 
 v0.1.9 - 2018-02-09
 ^^^^^^^^^^^^^^^^^^^
