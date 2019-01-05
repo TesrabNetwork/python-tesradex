@@ -38,6 +38,7 @@ v0.1.10 - 2018-02-10
 
 - remove slash in path in `get_order_details` function
 
+
 v0.1.9 - 2018-02-09
 ^^^^^^^^^^^^^^^^^^^
 
@@ -54,7 +55,7 @@ v0.1.8 - 2018-01-20
 
 **Fixed**
 
-- `cancel_order` format to make `order_type` required
+
 
 v0.1.7 - 2018-01-17
 ^^^^^^^^^^^^^^^^^^^
