@@ -50,7 +50,7 @@ v0.1.9 - 2018-02-09
 
 - path for `get_all_balances` to match update in Tesradex docs, now supports pagination
 
-v0.1.8 - 2018-01-20
+
 ^^^^^^^^^^^^^^^^^^^
 
 
