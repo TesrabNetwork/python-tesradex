@@ -73,9 +73,6 @@ v0.1.9 - 2018-02-09
 
 
 
-**Fixed**
-
-
 
 - `cancel_order` format to send symbol in URL
 - `cancel_all_orders` format to send symbol in URL
