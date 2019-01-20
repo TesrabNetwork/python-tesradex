@@ -60,12 +60,3 @@ v0.1.9 - 2018-02-09
 - old get_deal_orders function to get_symbol_dealt_orders
 
 
-
-
-
-**Added**
-
-
-
-
-
