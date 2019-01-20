@@ -99,7 +99,7 @@ v0.1.4 - 2018-01-14
 
 **Fixed**
 
-- handle success: false type errors properly to raise exception
+
 - fix passed param name on `get_kline_data`
 
 v0.1.3 - 2018-01-12
