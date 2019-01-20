@@ -132,7 +132,7 @@ v0.1.1 - 2018-01-02
 
 **Updated**
 
-- old get_deal_orders function to get_symbol_dealt_orders
+
 
 v0.1.0 - 2017-11-12
 ^^^^^^^^^^^^^^^^^^^
