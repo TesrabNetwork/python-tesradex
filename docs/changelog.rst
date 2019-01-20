@@ -57,6 +57,7 @@ v0.1.9 - 2018-02-09
 - `order_details` removed symbol from URL
 - `get_tick` symbol is now optional
 - fix `get_coin_list` URL
+- old get_deal_orders function to get_symbol_dealt_orders
 
 
 
