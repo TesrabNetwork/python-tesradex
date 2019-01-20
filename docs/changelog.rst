@@ -70,16 +70,13 @@ v0.1.9 - 2018-02-09
 
 
 
+
 **Added**
 
 
 
 
-- `cancel_order` format to send symbol in URL
-- `cancel_all_orders` format to send symbol in URL
-- `order_details` removed symbol from URL
-- `get_tick` symbol is now optional
-- fix `get_coin_list` URL
+
 
 
 v0.1.5 - 2018-01-14
