@@ -44,6 +44,7 @@ v0.1.10 - 2018-02-10
 - actually use the `kv_format` param on `get_active_orders`
 - remove debug output
 - handle success: false type errors properly to raise exception
+- fix passed param name on `get_kline_data`
 
 v0.1.9 - 2018-02-09
 ^^^^^^^^^^^^^^^^^^^
